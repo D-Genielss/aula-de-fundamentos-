@@ -40,8 +40,30 @@ int main(){
 
             printf("Teste 1\n");
 
-        }
+        }else{
+            if(Menu == 2){
+            
+            printf("Teste 2\n");
+            
+            }else{
+                if(Menu == 3){
+            
+                printf("saindo do programa\n");
+            
+                contador ++;
+                
+                }else{
+                    
+                    printf("Error , tente novamente\n");
+                    
+                }//else 3
+            
+            }//else 2
+            
+        }//else 1
 
-    }
+    }//while
+    
+    return 0;
 
 }
