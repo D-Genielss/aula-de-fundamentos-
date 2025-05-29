@@ -1,7 +1,10 @@
 /*Faça um programa que multiplique por 5 a
 matriz A (preenchida a partir do teclado) para gerar a
 matriz C.*/
- 
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
 
 int main(){
 
