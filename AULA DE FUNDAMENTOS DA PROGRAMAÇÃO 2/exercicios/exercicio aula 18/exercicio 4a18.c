@@ -7,15 +7,12 @@ Sabe-se que o 1º termo é 0 e o 2º termo é 1.*/
 #include <stdlib.h>
 
 //função Fibonacci
-int Fibonacci(int quantidade,int x ,int y,int z){
+int Fibonacci(int quantidade){
 
-    if(quantidade == 2){
-        return z;
+    if(quantidade <= 2){
+        return quantidade -1;
     }else{
-        z = x + y;
-        x = y;
-        y = z;
-        return Fibonacci(quantidade -1,x,y,z);
+        return quantidade + Fibonacci(quantidade -2);
     }
 }
 
@@ -24,9 +21,7 @@ int main(){
 //variaveis
 
     int Quantidade;
-    int x = 0;
-    int y = 1;
-    int z = 0;
+
     int N_FI;
 
 //buscando dados 
@@ -36,7 +31,7 @@ int main(){
 
 //chamando a função 
 
-    N_FI = Fibonacci(Quantidade,x,y,z);
+    N_FI = Fibonacci(Quantidade);
 
 //mostrando 
 
