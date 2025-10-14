@@ -1,10 +1,8 @@
-/*2) Escreva uma função que receba um valor inteiro positivo N por parâmetro e retorne
-o ponteiro para um vetor de tamanho N alocado dinamicamente. Se N for negativo ou
-igual a zero, um ponteiro nulo deverá ser retornado.*/
+/* Escreva uma função que receba um valor inteiro positivo N por parâmetro e retorne o ponteiro para um vetor de 
+tamanho N alocado dinamicamente. Se N for negativo ou igual a zero, um ponteiro nulo deverá ser retornado */
 
-#include<stdio.h>
-#include<stdlib.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 
 int* Valor(int n){
 
@@ -29,11 +27,32 @@ int* Valor(int n){
 }
 
 int main(){
+    
+//variaveis
 
     int N;
+    int* Vetor;
+    Vetor = (int*)malloc(N * sizeof(int));
 
-    printf("DIgite um valor pra o vetor : ");
+//buscando valor
+
+    printf("Digite um valor pra o vetor : ");
     scanf("%d",&N);
 
-    Valor(N);
+//função 
+    
+    Vetor = Valor(N);
+
+//mostrando vaores
+
+    for(int i = 0 ; i < N;i ++){
+           
+        printf(" o vetor[%d] eh : %d \n",i,Vetor);   
+           
+    }
+
+    
+    return 0;
+    
 }
+
